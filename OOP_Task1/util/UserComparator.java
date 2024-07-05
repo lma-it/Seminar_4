@@ -4,10 +4,10 @@ import java.util.Comparator;
 
 import OOP_Task1.Entity.User;
 
-public class UserComparator<T extends User> implements Comparator<T>{
+public interface UserComparator<T extends User> extends Comparator<T>{
 
     @Override
-    public int compare(T o1, T o2) {
+    default int compare(T o1, T o2) {
         return o1.getId() - o2.getId();
     }
     

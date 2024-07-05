@@ -1,6 +1,8 @@
 package OOP_Task1.Entity;
 
-public abstract class User{
+import OOP_Task1.util.UserComparator;
+
+public abstract class User implements UserComparator<User>, Comparable<User>{
 
     protected int id;
     protected String name;
@@ -36,5 +38,14 @@ public abstract class User{
         this.lastName = lastName;
     }
 
+    @Override
+    public int compareTo(User o) {
+        return compare(this, o);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("ID: %d Name: %s Last_Name: %s", getId(), getName(), getLastName());
+    }
     
 }
