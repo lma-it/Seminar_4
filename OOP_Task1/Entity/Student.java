@@ -1,25 +1,9 @@
 package OOP_Task1.Entity;
 
-
-public class Student extends User<String>{
+public class Student extends User{
     
-
-
-    public Student() {
+    public Student(int id, String name, String lastName) {
+        super(id, name, lastName);
     }
-
-
-    @Override
-    public String getName() {
-        return this.name;
-    }
-
-
-    @Override
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    
 
 }
