@@ -15,8 +15,6 @@ public class StudentController implements UserController{
     public <T extends User> User create(T user) {
         return (User) user;
     }
-    // Annotation: POST "https://expamle/student/create"
-    //create student(Student student) -> вызвать сервис который сохранит в БД.
 
     public void setOnConsole(List<Student> students){
         view.setOnConsole(students);

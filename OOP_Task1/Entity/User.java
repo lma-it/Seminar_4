@@ -1,6 +1,7 @@
 package OOP_Task1.entity;
 
 import OOP_Task1.util.UserComparator;
+import java.util.Scanner;
 
 public abstract class User implements UserComparator<User>, Comparable<User>{
 
@@ -47,6 +48,40 @@ public abstract class User implements UserComparator<User>, Comparable<User>{
     @Override
     public String toString() {
         return String.format("Student_%d: ID: %d, Name: %s, Last_Name: %s", ++count, getId(), getName(), getLastName());
+    }
+
+    public void editUser(){
+        System.out.println(this.toString());
+        System.out.println("Что именно вы хотите редактировать? Введите номер пункта для редактирования...");
+        System.out.println("1. Редактировать id.");
+        System.out.println("2. Редактировать name.");
+        System.out.println("3. Редактировать lastName.");
+        Scanner scanner = new Scanner(System.in);
+        int value = scanner.nextInt();
+
+        switch (value) {
+            case 1:
+                try {
+                    System.out.println("Введите новый id.");
+                    this.setId(Integer.parseInt(scanner.nextLine()));
+                    break;
+                } catch (NumberFormatException e) {
+                    System.out.println("Вы ввели не число!");
+                }
+            case 2:
+                System.out.println("Введите новое имя.");
+                this.setName(scanner.nextLine());
+                break;
+            case 3:
+                System.out.println("Введите новую фамилию.");
+                this.setLastName(scanner.nextLine());
+                break;
+            default:
+                scanner.close();
+        }
+
+        scanner.close();
+
     }
     
 }
