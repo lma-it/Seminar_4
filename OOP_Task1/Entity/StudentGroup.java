@@ -1,4 +1,4 @@
-package OOP_Task1.Entity;
+package OOP_Task1.entity;
 
 import java.util.ArrayList;
 import java.util.List;

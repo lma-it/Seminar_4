@@ -1,11 +1,11 @@
-package OOP_Task1.Controller;
+package OOP_Task1.controller;
 
 import java.util.List;
 
-import OOP_Task1.Entity.Student;
-import OOP_Task1.Entity.User;
-import OOP_Task1.View.StudentView;
-import OOP_Task1.View.UserView;
+import OOP_Task1.entity.Student;
+import OOP_Task1.entity.User;
+import OOP_Task1.view.StudentView;
+import OOP_Task1.view.UserView;
 
 public class StudentController implements UserController{
 

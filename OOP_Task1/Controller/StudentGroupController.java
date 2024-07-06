@@ -1,7 +1,7 @@
-package OOP_Task1.Controller;
+package OOP_Task1.controller;
 
-import OOP_Task1.Entity.Student;
-import OOP_Task1.Service.StudentGroupService;
+import OOP_Task1.entity.Student;
+import OOP_Task1.service.StudentGroupService;
 
 public class StudentGroupController {
 

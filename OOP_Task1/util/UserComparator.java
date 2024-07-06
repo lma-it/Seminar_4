@@ -2,7 +2,7 @@ package OOP_Task1.util;
 
 import java.util.Comparator;
 
-import OOP_Task1.Entity.User;
+import OOP_Task1.entity.User;
 
 public interface UserComparator<T extends User> extends Comparator<T>{
 

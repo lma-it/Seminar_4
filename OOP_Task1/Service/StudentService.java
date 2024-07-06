@@ -1,6 +1,6 @@
-package OOP_Task1.Service;
+package OOP_Task1.service;
 
-import OOP_Task1.Entity.Student;
+import OOP_Task1.entity.Student;
 
 public class StudentService {
 

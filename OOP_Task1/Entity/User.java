@@ -1,4 +1,4 @@
-package OOP_Task1.Entity;
+package OOP_Task1.entity;
 
 import OOP_Task1.util.UserComparator;
 
@@ -7,6 +7,7 @@ public abstract class User implements UserComparator<User>, Comparable<User>{
     protected int id;
     protected String name;
     protected String lastName;
+    private static int count = 0;
 
     public User(int id, String name, String lastName) {
         this.id = id;
@@ -45,7 +46,7 @@ public abstract class User implements UserComparator<User>, Comparable<User>{
 
     @Override
     public String toString() {
-        return String.format("ID: %d Name: %s Last_Name: %s", getId(), getName(), getLastName());
+        return String.format("Student_%d: ID: %d, Name: %s, Last_Name: %s", ++count, getId(), getName(), getLastName());
     }
     
 }

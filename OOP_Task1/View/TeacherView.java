@@ -1,8 +1,8 @@
-package OOP_Task1.View;
+package OOP_Task1.view;
 
 import java.util.List;
 
-import OOP_Task1.Entity.Teacher;
+import OOP_Task1.entity.Teacher;
 
 public class TeacherView implements UserView<Teacher>{
 

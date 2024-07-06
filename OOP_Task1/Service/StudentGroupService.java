@@ -1,10 +1,10 @@
-package OOP_Task1.Service;
-
-import OOP_Task1.Entity.Student;
-import OOP_Task1.Entity.StudentGroup;
+package OOP_Task1.service;
 
 import java.util.Collections;
 import java.util.List;
+
+import OOP_Task1.entity.Student;
+import OOP_Task1.entity.StudentGroup;
 
 public class StudentGroupService {
 
