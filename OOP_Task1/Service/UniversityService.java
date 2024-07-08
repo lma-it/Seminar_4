@@ -10,6 +10,7 @@ import OOP_Task1.entity.StudentGroup;
 import OOP_Task1.entity.Teacher;
 import OOP_Task1.entity.TeacherGroup;
 import OOP_Task1.util.MenuStrings;
+import OOP_Task1.util.UsersGenerator;
 import OOP_Task1.view.StudentView;
 import OOP_Task1.view.TeacherView;
 import OOP_Task1.view.UniversityView;
@@ -27,6 +28,8 @@ public class UniversityService {
     private boolean exit = false;
 
     public void menu(){
+
+        generate();
 
         println(MenuStrings.MAIN_MENU.getDescription());
         println("1. " + MenuStrings.BE_STUDENT.getDescription());
@@ -224,5 +227,10 @@ public class UniversityService {
             case 0:
                 break;
         }
+    }
+
+    public void generate(){
+        new UsersGenerator(studentGroupService, teacherGroupService).StudentGenereate();
+        new UsersGenerator(studentGroupService, teacherGroupService).TeacherGenerate();
     }
 }
