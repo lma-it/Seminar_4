@@ -1,27 +1,24 @@
 package OOP_Task1.entity;
 
+import OOP_Task1.util.MenuStrings;
 import OOP_Task1.util.UserComparator;
 import java.util.Scanner;
 
 public abstract class User implements UserComparator<User>, Comparable<User>{
 
-    protected int id;
-    protected String name;
-    protected String lastName;
-    private static int count = 0;
+    private final int id;
+    private String name;
+    private String lastName;
+    private static int count = 1;
 
-    public User(int id, String name, String lastName) {
-        this.id = id;
+    public User(String name, String lastName) {
+        this.id = count++;
         this.name = name;
         this.lastName = lastName;
     }
 
     public int getId() {
         return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -47,41 +44,32 @@ public abstract class User implements UserComparator<User>, Comparable<User>{
 
     @Override
     public String toString() {
-        return String.format("Student_%d: ID: %d, Name: %s, Last_Name: %s", ++count, getId(), getName(), getLastName());
+        return String.format("\n%s: ID: %d, Name: %s, Last_Name: %s",this.getClass().getSimpleName(), this.getId(), this.getName(), this.getLastName());
     }
 
     public void editUser(){
+
         System.out.println(this.toString());
         System.out.println("Что именно вы хотите редактировать? Введите номер пункта для редактирования...");
-        System.out.println("1. Редактировать id.");
-        System.out.println("2. Редактировать name.");
-        System.out.println("3. Редактировать lastName.");
+        System.out.println("1. " + MenuStrings.EDIT_NAME.getDescription());
+        System.out.println("2. " + MenuStrings.EDIT_LASTNAME.getDescription());
         Scanner scanner = new Scanner(System.in);
         int value = scanner.nextInt();
 
         switch (value) {
             case 1:
-                try {
-                    System.out.println("Введите новый id.");
-                    this.setId(Integer.parseInt(scanner.nextLine()));
-                    break;
-                } catch (NumberFormatException e) {
-                    System.out.println("Вы ввели не число!");
-                }
-            case 2:
                 System.out.println("Введите новое имя.");
+                scanner.nextLine();
                 this.setName(scanner.nextLine());
                 break;
-            case 3:
+            case 2:
                 System.out.println("Введите новую фамилию.");
+                scanner.nextLine();
                 this.setLastName(scanner.nextLine());
                 break;
             default:
                 scanner.close();
         }
 
-        scanner.close();
-
     }
-    
 }
