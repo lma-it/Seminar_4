@@ -1,9 +1,7 @@
 package OOP_Task1.util;
 
 import OOP_Task1.entity.Student;
-import OOP_Task1.entity.StudentGroup;
 import OOP_Task1.entity.Teacher;
-import OOP_Task1.entity.TeacherGroup;
 import OOP_Task1.service.StudentGroupService;
 import OOP_Task1.service.TeacherGroupService;
 
